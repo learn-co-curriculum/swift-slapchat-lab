@@ -18,7 +18,7 @@ Before we work on any views, we need to prepare our models for Core Data. This p
 
 ##### Data Model
 
-1. First, let's create our data model (`.xcdatamodeld`). Create a new file, select the "Core Data" section on the left, then choose "Data Model". Usually we give this the same name as our project, so let's name it "SlapChat".
+1. First, let's create our data model (`.xcdatamodeld`). Create a new file, under the "Core Data" section, select the "Data Model" icon option on the left. Usually we give this the same name as our project, so let's name it "SlapChat".
 2. Go to your new **.xcdatamodeld** file and create an entity (*"Add Entity" button near the bottom*) and name it `Message`. Give it two attributes: `content` (String) and `createdAt` (Date, though this is stored in Core Data as an `NSDate`). A singular name is used for each entity (e.g., `Message` rather than `Messages`), even if we know we're going to have multiples of the entity later on. This is because we're really dealing with *multiple entities*, each entity being its own instance of a `NSManagedObject` subclass. Wouldn't it be weird to say we're going to set the `content` of a `Messages`?
 
 Our `.xcdatamodeld` is set up, so now let's prepare `DataStore` so that it can fetch/save with Core Data. 
@@ -81,3 +81,5 @@ Let's keep rollin' with our theme of "just do it":
   2. Take your `generateTestData()` method out of `TableViewController` and put it where it belongs (`DataStore`).
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/swift-slapchat-lab' title='SlapChat'>SlapChat</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/swift-slapchat-lab'>Slapchat Lab</a> on Learn.co and start learning to code for free.</p>
